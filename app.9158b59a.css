@@ -131,6 +131,7 @@ h4 {
   display: flex;
 }
 .page h3 {
+  margin-top: 1rem;
   margin-bottom: 10px;
 }
 .page .desc {
@@ -190,17 +191,19 @@ h4 {
 }
 .page-1 .right img {
   width: 70%;
+  max-width: 320px;
 }
 .page-2 .left {
   flex-basis: 50%;
   text-align: center;
 }
+.page-2 .left img {
+  width: 50%;
+  max-width: 280px;
+}
 .page-2 .right {
   flex-basis: 50%;
   text-align: center;
-}
-.page-2 .right img {
-  width: 70%;
 }
 .extra {
   background-color: #f8f9fa;
