@@ -175,6 +175,7 @@ h4 {
 }
 .header {
   background-image: url(header_bg.1e335f32.png);
+  z-index: 0;
   background-repeat: no-repeat;
   width: 100%;
   background-size: 600px 600px;
