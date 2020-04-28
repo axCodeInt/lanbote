@@ -74,7 +74,7 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1;
+  line-height: 1.2;
 }
 h2 {
   font-size: 1.4rem;
@@ -86,24 +86,12 @@ h3 {
 h4 {
   font-size: 0.9rem;
 }
-.language {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: #fff;
-  font-weight: bold;
-  z-index: 3;
-}
-.language .link {
-  color: #fff;
-}
-.language .cur {
-  color: #234656;
-  text-decoration: underline;
+.logo {
+  width: 140px;
 }
 .desc {
   font-size: 0.7rem;
-  line-height: 1;
+  line-height: 1.2;
 }
 .nav {
   background-color: #234656;
@@ -116,17 +104,90 @@ h4 {
   line-height: 1;
   border-radius: 22px;
 }
+.tabbar {
+  position: relative;
+  z-index: 1;
+  padding: 0.6rem;
+  display: flex;
+  box-shadow: #dedede 0 4px 16px 5px;
+  justify-content: space-between;
+  overflow: visible;
+}
+.tabbar .language {
+  position: relative;
+  overflow: visible;
+}
+.tabbar .language .select {
+  position: absolute;
+  bottom: -56px;
+  background-color: #fff;
+  border-radius: 6px;
+  left: 50%;
+  margin-left: -50px;
+  border: 1px solid #dedede;
+  text-align: center;
+  box-shadow: #dedede 0 0 30px 0px;
+  display: none;
+}
+.tabbar .language .select a {
+  text-decoration: none;
+  display: inline-block;
+  color: #999;
+  width: 100%;
+  font-size: 0.65rem;
+}
+.tabbar .language .select a:last-child {
+  border-bottom: none;
+}
+.tabbar .language .select a:hover {
+  color: #234656;
+  text-decoration: underline;
+}
+.tabbar .language .select a.current {
+  cursor: default;
+  color: #234656;
+  text-decoration: none;
+}
+.tabbar .language:hover .select {
+  display: block;
+}
+.tabbar .language .text {
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 0 12px;
+  font-size: 0.85rem;
+}
+.tabbar .language .text::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -3px;
+  margin-right: 0;
+  border-left: 4px solid transparent;
+  border-top: 6px solid #777;
+  border-right: 4px solid transparent;
+}
 .header {
+  background-image: url(header_bg.1e335f32.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: 600px 600px;
+  background-position: right;
   position: relative;
   height: 60vh;
   display: flex;
 }
 .header .left {
+  flex-basis: 48%;
   position: relative;
   z-index: 1;
   padding-top: 10px;
   padding-left: 1.6rem;
-  width: 50%;
+}
+.header .left .img {
+  display: none;
 }
 .header .left .title {
   width: 0;
@@ -145,15 +206,6 @@ h4 {
   font-size: 0.6rem;
   color: #888;
 }
-.header .bg {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-}
-.header .bg img {
-  height: 100%;
-}
 .page {
   padding: 40px 20px;
   display: flex;
@@ -171,6 +223,9 @@ h4 {
 }
 .page .desc {
   color: #888;
+}
+.page img {
+  margin-top: 2rem;
 }
 .page-1 {
   background-color: #f8f9fa;
@@ -297,24 +352,39 @@ h4 {
   margin: 60px 0 10px;
 }
 @media screen and (max-width: 414px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.1;
+  }
+  .logo {
+    width: 6rem;
+  }
   .nav {
     padding: 4px 12px;
     line-height: 1;
   }
   .header {
-    height: 30vh;
+    height: auto;
+    background-image: none;
   }
   .header .left {
-    flex-basis: 52%;
+    padding: 1rem 4rem;
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .header .left .img {
+    display: inline-block;
   }
   .header .left h2 {
     margin-top: 0.5rem;
-    font-size: 0.9rem;
     font-weight: bold;
   }
   .header .left h4 {
     font-size: 0.8rem;
-    line-height: 1;
   }
   .header .left .desc {
     font-size: 0.6rem;
@@ -322,6 +392,13 @@ h4 {
   .header .left .nav {
     margin-top: 5px;
     font-size: 0.5rem;
+  }
+  .header .bg {
+    position: relative;
+    display: block;
+  }
+  .header .bg .bg_img {
+    display: none;
   }
   .page {
     text-align: center;

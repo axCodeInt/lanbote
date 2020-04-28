@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../font/PingFangHK-Regular.woff2":[["PingFangHK-Regular.e967545d.woff2","static/font/PingFangHK-Regular.woff2"],"static/font/PingFangHK-Regular.woff2"],"_css_loader":"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../font/PingFangHK-Regular.woff2":[["PingFangHK-Regular.e967545d.woff2","static/font/PingFangHK-Regular.woff2"],"static/font/PingFangHK-Regular.woff2"],"./../images/header_bg.png":[["header_bg.1e335f32.png","static/images/header_bg.png"],"static/images/header_bg.png"],"_css_loader":"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61218" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56197" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
